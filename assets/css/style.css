@@ -30164,9 +30164,9 @@ body.tmp-white-version.index-8 .tmp-contact-about-inner .info-box {
   color: var(--color-heading);
   font-family: var(--font-primary);
   font-weight: 400;
-  margin-top: 22px;
-  font-size: 50px;
-  line-height: 60px;
+  margin: 22px 0px;
+  font-size: 35px;
+  line-height: 1.2;
 }
 
 @media (min-width: 992px) {
@@ -31215,7 +31215,6 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(85%) sepia(60%) saturate(500%) hue-rotate(5deg) brightness(105%) contrast(105%);
 }
 
 @media only screen and (max-width: 767px) {
@@ -31289,15 +31288,15 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 
 /* UI Polishing: Tighten Section Gaps */
 .sauravpal-page .tmp-section-gap {
-  padding: 100px 0;
+  padding: 60px 0;
 }
 
 .sauravpal-page .tmp-section-gapBottom {
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 
 .sauravpal-page .tmp-section-gapTop {
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -31340,12 +31339,13 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 /* Marquee area spacing */
 .sauravpal-page .tmp-marquee-area {
   padding-bottom: 0 !important;
+  padding-top: 50px !important;
 }
 
 /* Testimonial section spacing */
 .sauravpal-page .clients-testimonial-area {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* Footer spacing */
@@ -31361,9 +31361,14 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 
 /* Contact section spacing */
 .sauravpal-page .tmp-contact-area {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
+
+.sauravpal-page section#contacts {
+  padding: 60px !important;
+}
+
 /* Purple Button Styles */
 .sauravpal-page .tmp-btn,
 .sauravpal-page .tmp-btn-border,
@@ -31474,4 +31479,87 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+
+
+/* ===== All accent backgrounds: #5137fa with #ffffff text ===== */
+
+/* Chat/Messenger floating button */
+.sauravpal-page .ready-chatting-option label {
+  background: #5137fa !important;
+  color: #ffffff !important;
+}
+
+.sauravpal-page .ready-chatting-option .wrapper .head-text {
+  background: #5137fa !important;
+  color: #ffffff !important;
+}
+
+.sauravpal-page .ready-chatting-option .chat-box form .field button {
+  background: #5137fa !important;
+  color: #ffffff !important;
+}
+
+/* Scroll-to-top button */
+.sauravpal-page .scrollToTop .water {
+  background-color: #5137fa !important;
+}
+
+.sauravpal-page .scrollToTop .water svg use {
+  fill: #5137fa !important;
+}
+
+.sauravpal-page .scrollToTop .water_wave_back {
+  fill: #5137fa !important;
+}
+
+.sauravpal-page .scrollToTop .water_wave_front {
+  fill: rgba(81, 55, 250, 0.85) !important;
+}
+
+.sauravpal-page .scrollToTop .arrowUp {
+  color: #ffffff !important;
+}
+
+/* Portfolio filter tabs - active tab */
+.sauravpal-page .latest-portfolio-tabs-area .nav .nav-link.active {
+  background: #5137fa !important;
+  color: #ffffff !important;
+}
+
+/* About section icon circles */
+.sauravpal-page .about-us-section-card .about-us-card .card-head .logo-img {
+  background: #5137fa !important;
+}
+
+.sauravpal-page .about-us-section-card .about-us-card .card-head .logo-img img {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Hamburger menu button */
+.sauravpal-page .tmp-menu-bars {
+  border-color: #5137fa !important;
+  color: #ffffff !important;
+}
+
+.sauravpal-page .tmp-menu-bars::after {
+  background: #5137fa !important;
+}
+
+.sauravpal-page .tmp-menu-bars:hover {
+  color: #5137fa !important;
+}
+
+/* Round action buttons (close buttons etc.) */
+.sauravpal-page .tmp-round-action-btn {
+  background: #5137fa !important;
+  border-color: #5137fa !important;
+  color: #ffffff !important;
+}
+
+
+/* Nav menu - larger text */
+.sauravpal-page .tmp-mainmenu-nav .tmp-mainmenu>li>a {
+  font-size: 22px;
 }

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Reeni is a modern personal portfolio template for designers, developers, content writer, cleaner, programmer, fashion designer, model, Influencer and freelancers. Fully responsive, SEO-friendly, Bootstrap and easy to customize.">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/saurav-pal-logo-1.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/sauravpaljoy.png">
     <title>Saurav Pal - Personal Portfolio | Full Stack Developer & Designer</title>
     <!-- Bootstrap min css -->
     <link rel="stylesheet" href="assets/css/vendor/fontawesome.css">
@@ -29,8 +29,8 @@
                     <div class="header-content">
                         <div class="logo">
                             <a href="index.html">
-                                <img class="logo-dark" src="assets/images/logo/sauravpal-logo.png" alt="Saurav Pal">
-                                <img class="logo-white" src="assets/images/logo/sauravpal-logo.png" alt="Saurav Pal">
+                                <img class="logo-dark" src="assets/images/logo/sauravpaljoy-logo.png" alt="Saurav Pal">
+                                <img class="logo-white" src="assets/images/logo/sauravpaljoy-logo.png" alt="Saurav Pal">
                             </a>
                         </div>
                         <nav class="tmp-mainmenu-nav d-none d-xl-block">
@@ -96,8 +96,8 @@
             <div class="inner">
                 <div class="top-area">
                     <a href="index.html" class="logo">
-                        <img class="logo-dark" src="assets/images/logo/sauravpal-logo.png" alt="Saurav Pal">
-                        <img class="logo-white" src="assets/images/logo/sauravpal-logo.png" alt="Saurav Pal">
+                        <img class="logo-dark" src="assets/images/logo/sauravpaljoy-logo.png" alt="Saurav Pal">
+                        <img class="logo-white" src="assets/images/logo/sauravpaljoy-logo.png" alt="Saurav Pal">
                     </a>
                     <div class="close-icon-area">
                         <button class="tmp-round-action-btn close_side_menu_active">
@@ -108,7 +108,7 @@
                 <div class="content-wrapper">
                     <div class="image-area-feature">
                         <a href="index.html">
-                            <img src="assets/images/logo/man.png" alt="personal-logo">
+
                         </a>
                     </div>
                     <h5 class="title mt--30">Freelancer delivering exceptional WordPress & Web Development solutions.
@@ -173,8 +173,8 @@
                 <div class="header-top">
                     <div class="logo">
                         <a href="index.html" class="logo-area">
-                            <img class="logo-dark" src="assets/images/logo/sauravpal-logo.png" alt="Saurav Pal">
-                            <img class="logo-white" src="assets/images/logo/sauravpal-logo.png" alt="Saurav Pal">
+                            <img class="logo-dark" src="assets/images/logo/sauravpaljoy-logo.png" alt="Saurav Pal">
+                            <img class="logo-white" src="assets/images/logo/sauravpaljoy-logo.png" alt="Saurav Pal">
                         </a>
 
                     </div>
@@ -285,11 +285,9 @@
                 <h2
                     class="text-para-documents tmp-scroll-trigger tmp-fade-in inv-title-animation-wrap animation-order-1">
                     I build stunning
-                    <span>WordPress</span> websites with custom themes,
-                    advanced <span>Elementor Pro</span> layouts, and optimized
-                    performance — delivering exceptional <span>digital experiences</span> that help businesses
-                    grow
-                    online
+                    <span>WordPress</span> websites with custom themes,advanced <span>Elementor Pro</span> layouts, and
+                    optimized performance — delivering exceptional <span>digital experiences</span> that help businesses
+                    grow online
                 </h2>
                 <div class="right-bg-text-para">
                     <img src="assets/images/banner/right-bg-text-para-doc.png" alt="">
@@ -2009,10 +2007,10 @@
                         <div class="single-footer-wrapper border-right mr--20">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/images/logo/sauravpal-logo.png" alt="Saurav Pal">
+                                    <img src="assets/images/logo/sauravpaljoy-logo.png" alt="Saurav Pal">
                                 </a>
                             </div>
-                            <p class="description"><span>Get Ready</span> To Create Great</p>
+                            <p class="description">Get Ready To Create Great</p>
                         </div>
                         <div class="social-link footer">
                             <a href="https://sauravpal.xyz" target="_blank"><i class="fa-solid fa-globe"></i></a>
@@ -2179,6 +2177,48 @@
     <script src="assets/js/plugins/text-type.js"></script>
     <!-- custom Js -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Scroll Spy: highlight active nav link on scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.tmp-mainmenu li a[href^="#"]');
+            const sections = [];
+
+            navLinks.forEach(function (link) {
+                const id = link.getAttribute('href').substring(1);
+                const section = document.getElementById(id);
+                if (section) {
+                    sections.push({ id: id, el: section, link: link });
+                }
+            });
+
+            function setActive(activeId) {
+                navLinks.forEach(function (link) {
+                    link.classList.remove('active');
+                });
+                const activeLinks = document.querySelectorAll('.tmp-mainmenu li a[href="#' + activeId + '"]');
+                activeLinks.forEach(function (link) {
+                    link.classList.add('active');
+                });
+            }
+
+            function onScroll() {
+                const scrollPos = window.scrollY + 150;
+                let current = '';
+                sections.forEach(function (s) {
+                    if (s.el.offsetTop <= scrollPos) {
+                        current = s.id;
+                    }
+                });
+                if (current) {
+                    setActive(current);
+                }
+            }
+
+            window.addEventListener('scroll', onScroll);
+            onScroll();
+        });
+    </script>
 </body>
 
 </html>

@@ -17335,7 +17335,7 @@ Section Head
   z-index: 1;
   background: rgba(255, 255, 255, 0.062745098);
   border-radius: 100%;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .social-link a::after {

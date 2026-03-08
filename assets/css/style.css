@@ -59,6 +59,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
+@media only screen and (max-width: 1199px) {
+  .tmp-mainmenu {
+    display: none !important;
+  }
+
+  .tmp-header-right .social-share-wrapper {
+    display: none !important;
+  }
+}
+
+
 :root {
   --color-primary: #fcc347;
   --color-primary-alt: #fcc347d9;
@@ -14581,6 +14592,9 @@ header.header-full-width.header--sticky.sticky {
   align-items: center;
   justify-content: center;
   width: 100%;
+  opacity: 0.1;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 @media (min-width: 300px) {
@@ -23454,7 +23468,8 @@ section.clients-testimonial-area {
   border: none !important;
 }
 
-.contact-form .contact-form-wrapper .form-group input {
+.contact-form .contact-form-wrapper .form-group input,
+.contact-form .contact-form-wrapper .form-group select {
   background: transparent;
   height: inherit;
   padding: 15px 20px;
@@ -23463,9 +23478,16 @@ section.clients-testimonial-area {
   font-weight: 600;
   border-radius: 10px;
   border: 2px solid var(--color-border);
+  width: 100%;
 }
 
-.contact-form .contact-form-wrapper .form-group input:focus {
+.contact-form .contact-form-wrapper .form-group select option {
+  background-color: var(--color-black);
+  color: var(--color-heading);
+}
+
+.contact-form .contact-form-wrapper .form-group input:focus,
+.contact-form .contact-form-wrapper .form-group select:focus {
   border-color: var(--color-primary);
 }
 
@@ -31111,21 +31133,90 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
   --text-gradient-one: linear-gradient(to right, #fcc347, #d4a017);
 }
 
+.sauravpal-page .service-card-v2 i {
+  color: #ffffff;
+  font-size: 32px;
+  transition: 0.4s;
+}
+
 .sauravpal-page .service-card-v2 {
   background: var(--color-gray-2);
   border: 1px solid var(--color-border);
+  padding: 40px 30px;
+  border-radius: 20px;
+  transition: 0.4s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.sauravpal-page .service-card-v2 .icon-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
   transition: 0.4s;
 }
 
 .sauravpal-page .service-card-v2:hover {
   border-color: var(--color-primary);
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-.sauravpal-page .service-card-v2 i {
-  color: #fcc347;
-  font-size: 24px;
+.sauravpal-page .service-card-v2:hover .icon-box {
+  transform: scale(1.1);
 }
+
+/* Service Box Colors based on user images */
+.sauravpal-page .bg-wordpress {
+  background: #69c3ed;
+}
+
+.sauravpal-page .bg-design {
+  background: #5137fa;
+}
+
+.sauravpal-page .bg-store {
+  background: #fcc347;
+}
+
+.sauravpal-page .bg-speed {
+  background: #00d632;
+}
+
+.sauravpal-page .bg-elementor {
+  background: #bc0082;
+}
+
+.sauravpal-page .bg-maintenance {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.sauravpal-page .service-card-v2 .title {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.sauravpal-page .service-card-v2 .service-para {
+  margin-top: 5px;
+  margin-bottom: 0;
+  flex-grow: 1;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+
 
 .sauravpal-page .expertise-section .progress-charts {
   background: var(--color-gray-2);
@@ -31246,7 +31337,7 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 .marquee-content {
   display: flex;
   white-space: nowrap;
-  animation: marquee 30s linear infinite;
+  animation: marquee 20s linear infinite;
   align-items: center;
 }
 
@@ -31268,8 +31359,8 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 }
 
 .elementor-icon-list-text {
-  font-size: 16px;
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 700;
   color: #000000;
   text-transform: uppercase;
   font-family: var(--font-primary);
@@ -31282,7 +31373,7 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 

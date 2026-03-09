@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 
 <body class="sauravpal-page">
@@ -75,8 +77,8 @@
                                 </div>
                             </div>
                             <div class="actions-area">
-                                <div class="tmp-side-collups-area d-none d-xl-none">
-                                    <button class="tmp-menu-bars d-xl-none tmp_button_active"><i
+                                <div class="tmp-side-collups-area d-none d-xl-block">
+                                    <button class="tmp-menu-bars tmp_button_active"><i
                                             class="fa-regular fa-bars-staggered"></i></button>
                                 </div>
                                 <div class="tmp-side-collups-area d-block d-xl-none">
@@ -970,22 +972,27 @@
                         <li>
                             <button class="nav-link active" id="nav-all-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all"
-                                aria-selected="true">All Categories</button>
-                        </li>
-                        <li>
-                            <button class="nav-link" id="nav-service-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-service" type="button" role="tab" aria-controls="nav-service"
-                                aria-selected="false">Service Website</button>
+                                aria-selected="true">All Projects</button>
                         </li>
                         <li>
                             <button class="nav-link" id="nav-landing-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-landing" type="button" role="tab" aria-controls="nav-landing"
-                                aria-selected="false">Landing Page Design</button>
+                                aria-selected="false">Landing Page</button>
                         </li>
                         <li>
                             <button class="nav-link" id="nav-ecommerce-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-ecommerce" type="button" role="tab" aria-controls="nav-ecommerce"
-                                aria-selected="false">E-Commerce</button>
+                                aria-selected="false">E-commerce</button>
+                        </li>
+                        <li>
+                            <button class="nav-link" id="nav-business-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-business" type="button" role="tab" aria-controls="nav-business"
+                                aria-selected="false">Business</button>
+                        </li>
+                        <li>
+                            <button class="nav-link" id="nav-agency-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-agency" type="button" role="tab" aria-controls="nav-agency"
+                                aria-selected="false">Agency</button>
                         </li>
                     </ul>
                 </nav>
@@ -1638,7 +1645,8 @@
                     <span class="subtitle">Our Testimonial</span>
                 </div>
                 <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">Enhancing Collaboration
-                    <br> between Remote</h2>
+                    <br> between Remote
+                </h2>
             </div>
             <div class="row g-5">
                 <!-- Start Single Testimonial  -->
@@ -1652,7 +1660,7 @@
                                         class="testimonial-card tmponhover style-2 tmp-scroll-trigger animation-order-1">
                                         <div class="content">
                                             <div class="testimonital-icon">
-                                                <img src="assets/images/icons/quote.svg" alt="testimonial-icon">
+                                                <img src="assets/images/icons/quat-logo.svg" alt="testimonial-icon">
                                             </div>
                                             <h2 class="text-doc">A personal portfolio is a curated collection of an
                                                 individual's professional work, showcasing their skilA personal
@@ -1668,7 +1676,7 @@
                                         class="testimonial-card tmponhover style-2 tmp-scroll-trigger animation-order-2">
                                         <div class="content">
                                             <div class="testimonital-icon">
-                                                <img src="assets/images/icons/quote.svg" alt="testimonial-icon">
+                                                <img src="assets/images/icons/quat-logo.svg" alt="testimonial-icon">
                                             </div>
                                             <h2 class="text-doc">A personal portfolio is a curated collection of an
                                                 individual's professional work, showcasing their skilA personal
@@ -1684,7 +1692,7 @@
                                         class="testimonial-card tmponhover style-2 tmp-scroll-trigger animation-order-1">
                                         <div class="content">
                                             <div class="testimonital-icon">
-                                                <img src="assets/images/icons/quote.svg" alt="testimonial-icon">
+                                                <img src="assets/images/icons/quat-logo.svg" alt="testimonial-icon">
                                             </div>
                                             <h2 class="text-doc">A personal portfolio is a curated collection of an
                                                 individual's professional work, showcasing their skilA personal
@@ -1700,7 +1708,7 @@
                                         class="testimonial-card tmponhover style-2 tmp-scroll-trigger animation-order-2">
                                         <div class="content">
                                             <div class="testimonital-icon">
-                                                <img src="assets/images/icons/quote.svg" alt="testimonial-icon">
+                                                <img src="assets/images/icons/quat-logo.svg" alt="testimonial-icon">
                                             </div>
                                             <h2 class="text-doc">A personal portfolio is a curated collection of an
                                                 individual's professional work, showcasing their skilA personal
@@ -1767,7 +1775,11 @@
                             </div>
                             <div class="contact-form">
                                 <div id="form-messages" class="error"></div>
-                                <form class="tmp-dynamic-form" id="contact-form" method="POST" action="mailer.php">
+                                <form class="tmp-dynamic-form" id="contact-form" method="POST"
+                                    action="https://api.web3forms.com/submit">
+                                    <input type="hidden" name="access_key" value="8684d6f2-2de1-448d-b663-ab14d7934e24">
+                                    <input type="hidden" name="from_name" value="Saurav Portfolio">
+                                    <input type="hidden" name="subject" value="New Submission from Saurav Portfolio">
                                     <div class="contact-form-wrapper row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
@@ -1886,7 +1898,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="#contacts">Pricing</a>
+                                    <a href="#home">Pricing</a>
                                 </li>
                             </ul>
                         </div>
@@ -1951,7 +1963,10 @@
                 <div class="desc-text">
                     Please fill out the form below to start chatting with me directly.
                 </div>
-                <form class="tmp-dynamic-form" action="#">
+                <form class="tmp-dynamic-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="8684d6f2-2de1-448d-b663-ab14d7934e24">
+                    <input type="hidden" name="from_name" value="Saurav Portfolio Sidebar">
+                    <input type="hidden" name="subject" value="New Chat Lead from Sidebar">
                     <div class="field">
                         <input class="input-field" name="name" placeholder="Your Name" type="text" required>
                     </div>
@@ -2027,6 +2042,7 @@
     <script src="assets/js/plugins/text-type.js"></script>
     <!-- custom Js -->
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Scroll Spy: highlight active nav link on scroll -->
     <script>

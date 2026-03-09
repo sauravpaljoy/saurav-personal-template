@@ -14023,12 +14023,11 @@ header.header-full-width.header--sticky.sticky {
 }
 
 .tmp-banner-one-area {
-  padding-top: 26px;
-  background-image: url("../images/banner/banner-background-one.jpg");
+  background-image: url("../images/banner/banner-background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 120px;
+  padding-top: 200px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -19918,12 +19917,11 @@ section.clients-testimonial-area {
 }
 
 .tmp-banner-one-area {
-  padding-top: 26px;
   background-image: url("../images/banner/banner-background-one.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 120px;
+  padding-top: 200px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -31302,7 +31300,7 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 .sauravpal-page .tmp-popup-mobile-menu .logo img,
 .sauravpal-page .footer-area .logo img {
   max-width: 1200px;
-  max-height: 42px !important;
+  max-height: 35px !important;
   width: auto;
   height: auto;
   object-fit: contain;

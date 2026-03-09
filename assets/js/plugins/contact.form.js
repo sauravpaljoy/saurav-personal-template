@@ -13,35 +13,59 @@
 (function ($) {
     'use strict';
 
-    var form = $('#contact-form');
-    var formMessages = $('#form-messages');
-
-    $(form).submit(function (e) {
+    $('.tmp-dynamic-form').submit(function (e) {
         e.preventDefault();
+        var form = $(this);
+        var formMessages = form.find('#form-messages').length ? form.find('#form-messages') : $('#form-messages');
 
-        // Form data serialize + phone field যুক্ত করা
-        var formData = $(form).serialize() + "&phone=" + $('#contact-phone').val();
+        // Form data serialize
+        var formData = form.serialize();
+
+        // Dynamically update subject if name is present
+        var nameVal = form.find('input[name="name"]').val();
+        if (nameVal && form.find('input[name="subject"]').length) {
+            formData = formData.replace(/subject=[^&]*/, "subject=" + encodeURIComponent("New Lead from " + nameVal));
+        }
 
         $.ajax({
             type: 'POST',
-            url: $(form).attr('action'),
-            data: formData
+            url: form.attr('action'),
+            data: formData,
+            dataType: 'json'
         })
-        .done(function (response) {
-            $(formMessages).removeClass('error').addClass('success').text(response);
+            .done(function (response) {
+                if (response.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Thank You!',
+                        text: response.message || 'Your message has been sent successfully.',
+                        confirmButtonColor: '#3085d6'
+                    });
+                    // ইনপুট ফিল্ড ক্লিয়ার করা
+                    form.find('input, textarea').val('');
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: response.message || 'Something went wrong!',
+                        confirmButtonColor: '#d33'
+                    });
+                }
+            })
+            .fail(function (data) {
+                var errorMsg = 'Oops! An error occurred and your message could not be sent.';
+                var errorResponse = data.responseJSON;
+                if (errorResponse && errorResponse.message) {
+                    errorMsg = errorResponse.message;
+                }
 
-            // ইনপুট ফিল্ড ক্লিয়ার করা
-            $('#contact-name, #contact-email, #subject, #contact-message, #contact-phone').val('');
-        })
-        .fail(function (data) {
-            $(formMessages).removeClass('success').addClass('error');
-
-            if (data.responseText !== '') {
-                $(formMessages).text(data.responseText);
-            } else {
-                $(formMessages).text('Oops! An error occurred and your message could not be sent.');
-            }
-        });
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: errorMsg,
+                    confirmButtonColor: '#d33'
+                });
+            });
     });
 
 })(jQuery);

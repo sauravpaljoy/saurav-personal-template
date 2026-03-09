@@ -31153,8 +31153,8 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 }
 
 .sauravpal-page .service-card-v2 .icon-box {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -31310,7 +31310,7 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 
   .sauravpal-page .header-one .logo img,
   .sauravpal-page .tmp-popup-mobile-menu .logo img {
-    max-height: 32px !important;
+    max-height: 20px !important;
   }
 }
 
@@ -31390,15 +31390,31 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 
 @media only screen and (max-width: 767px) {
   .sauravpal-page .tmp-section-gap {
-    padding: 30px 0;
+    padding: 30px 15px;
   }
 
   .sauravpal-page .tmp-section-gapBottom {
-    padding-bottom: 30px;
+    padding: 0 15px 30px 15px;
   }
 
   .sauravpal-page .tmp-section-gapTop {
-    padding-top: 30px;
+    padding: 30px 15px 0 15px;
+  }
+
+  .sauravpal-page .tmp-banner-one-area {
+    padding-top: 100px !important;
+  }
+
+  .sauravpal-page .button-area-banner-one {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    width: 100% !important;
+  }
+
+  .sauravpal-page .button-area-banner-one .tmp-btn {
+    width: 100% !important;
+    text-align: center;
   }
 
   .sauravpal-page .section-head {
@@ -31408,6 +31424,39 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
   .sauravpal-page .section-head .title {
     font-size: 28px;
     line-height: 1.3;
+  }
+
+  .sauravpal-page .resume-title {
+    font-size: 15px !important;
+    line-height: 25px !important;
+  }
+
+  .sauravpal-page .service-card-v2 .title {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    font-size: 17px !important;
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
+  }
+
+  .sauravpal-page .service-card-v2 {
+    padding: 20px 20px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .container,
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+
+  .header-one .header-content {
+    padding: 0px 15px !important;
   }
 }
 
@@ -31455,7 +31504,13 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 }
 
 .sauravpal-page section#contacts {
-  padding: 40px !important;
+  padding: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .sauravpal-page section#contacts {
+    padding: 30px 15px !important;
+  }
 }
 
 /* Purple Button Styles */

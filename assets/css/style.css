@@ -14542,9 +14542,9 @@ header.header-full-width.header--sticky.sticky {
 
 .banner-one-main-wrapper .banner-right-content img {
   max-width: 600px;
-  height: auto;
+  height: 600px;
   object-fit: contain;
-  margin-right: 70px;
+  margin-right: 0px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
@@ -14568,6 +14568,9 @@ header.header-full-width.header--sticky.sticky {
 @media only screen and (max-width: 767px) {
   .banner-one-main-wrapper .banner-right-content img {
     margin: auto;
+    height: 400px;
+    max-width: 400px;
+    object-fit: contain;
   }
 }
 
@@ -19917,11 +19920,11 @@ section.clients-testimonial-area {
 }
 
 .tmp-banner-one-area {
-  background-image: url("../images/banner/banner-background-one.jpg");
+  background-image: url("../images/banner/bg-01.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 200px;
+  padding-top: 120px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -19932,7 +19935,7 @@ section.clients-testimonial-area {
 
 @media only screen and (max-width: 767px) {
   .tmp-banner-one-area {
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 }
 
@@ -20436,7 +20439,7 @@ section.clients-testimonial-area {
 
 .banner-one-main-wrapper .banner-right-content img {
   max-width: 600px;
-  height: auto;
+  height: 600px;
   object-fit: contain;
   margin-right: 70px;
 }
@@ -20462,12 +20465,15 @@ section.clients-testimonial-area {
 @media only screen and (max-width: 767px) {
   .banner-one-main-wrapper .banner-right-content img {
     margin: auto;
+    height: 400px;
+
+    object-fit: contain;
   }
 }
 
 @media only screen and (max-width: 575px) {
   .banner-one-main-wrapper .banner-right-content img {
-    max-width: 260px;
+    max-width: 400px;
   }
 }
 
@@ -31179,7 +31185,7 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 }
 
 .sauravpal-page .bg-design {
-  background: #5137fa;
+  background: #1a964c;
 }
 
 .sauravpal-page .bg-store {
@@ -31270,10 +31276,10 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 }
 
 .sauravpal-page .expertise-section .progress-bar {
-  background: linear-gradient(90deg, #5137fa 0%, #fcc347 100%);
+  background: linear-gradient(90deg, #1a964c 0%, #fcc347 100%);
   border-radius: 10px;
   position: relative;
-  box-shadow: 0 0 15px rgba(81, 55, 250, 0.3);
+  box-shadow: 0 0 15px rgba(26, 150, 76, 0.3);
 }
 
 .sauravpal-page .expertise-image-wrap {
@@ -31402,19 +31408,27 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
   }
 
   .sauravpal-page .tmp-banner-one-area {
-    padding-top: 100px !important;
+    padding-top: 75px !important;
   }
 
   .sauravpal-page .button-area-banner-one {
     display: flex !important;
-    flex-direction: column !important;
-    gap: 30px !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
     width: 100% !important;
   }
 
   .sauravpal-page .button-area-banner-one .tmp-btn {
-    width: 100% !important;
+    width: auto !important;
     text-align: center;
+    padding: 0 20px !important;
+    font-size: 15px !important;
+    height: 50px !important;
+    font-weight: 600 !important;
+    line-height: 50px !important;
+    border-radius: 500px !important;
   }
 
   .sauravpal-page .section-head {
@@ -31519,8 +31533,8 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 .sauravpal-page .btn-primary,
 .sauravpal-page a.tmp-btn,
 .sauravpal-page button.tmp-btn {
-  background: #5137fa !important;
-  border-color: #5137fa !important;
+  background: #1a964c !important;
+  border-color: #1a964c !important;
   color: #ffffff !important;
 }
 
@@ -31529,20 +31543,20 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 .sauravpal-page .btn-primary:hover,
 .sauravpal-page a.tmp-btn:hover,
 .sauravpal-page button.tmp-btn:hover {
-  background: #3d23e6 !important;
-  border-color: #3d23e6 !important;
+  background: #126d37 !important;
+  border-color: #126d37 !important;
   color: #ffffff !important;
-  box-shadow: 0 8px 25px rgba(81, 55, 250, 0.4);
+  box-shadow: 0 8px 25px rgba(26, 150, 76, 0.4);
 }
 
 .sauravpal-page .tmp-btn-border {
   background: transparent !important;
-  border: 2px solid #5137fa !important;
-  color: #5137fa !important;
+  border: 2px solid #1a964c !important;
+  color: #1a964c !important;
 }
 
 .sauravpal-page .tmp-btn-border:hover {
-  background: #5137fa !important;
+  background: #1a964c !important;
   color: #ffffff !important;
 }
 
@@ -31627,39 +31641,39 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 
 
 
-/* ===== All accent backgrounds: #5137fa with #ffffff text ===== */
+/* ===== All accent backgrounds: #1a964c with #ffffff text ===== */
 
 /* Chat/Messenger floating button */
 .sauravpal-page .ready-chatting-option label {
-  background: #5137fa !important;
+  background: #1a964c !important;
   color: #ffffff !important;
 }
 
 .sauravpal-page .ready-chatting-option .wrapper .head-text {
-  background: #5137fa !important;
+  background: #1a964c !important;
   color: #ffffff !important;
 }
 
 .sauravpal-page .ready-chatting-option .chat-box form .field button {
-  background: #5137fa !important;
+  background: #1a964c !important;
   color: #ffffff !important;
 }
 
 /* Scroll-to-top button */
 .sauravpal-page .scrollToTop .water {
-  background-color: #5137fa !important;
+  background-color: #1a964c !important;
 }
 
 .sauravpal-page .scrollToTop .water svg use {
-  fill: #5137fa !important;
+  fill: #1a964c !important;
 }
 
 .sauravpal-page .scrollToTop .water_wave_back {
-  fill: #5137fa !important;
+  fill: #1a964c !important;
 }
 
 .sauravpal-page .scrollToTop .water_wave_front {
-  fill: rgba(81, 55, 250, 0.85) !important;
+  fill: rgba(26, 150, 76, 0.85) !important;
 }
 
 .sauravpal-page .scrollToTop .arrowUp {
@@ -31668,13 +31682,13 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 
 /* Portfolio filter tabs - active tab */
 .sauravpal-page .latest-portfolio-tabs-area .nav .nav-link.active {
-  background: #5137fa !important;
+  background: #1a964c !important;
   color: #ffffff !important;
 }
 
 /* About section icon circles */
 .sauravpal-page .about-us-section-card .about-us-card .card-head .logo-img {
-  background: #5137fa !important;
+  background: #1a964c !important;
 }
 
 .sauravpal-page .about-us-section-card .about-us-card .card-head .logo-img img {
@@ -31683,22 +31697,22 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 
 /* Hamburger menu button */
 .sauravpal-page .tmp-menu-bars {
-  border-color: #5137fa !important;
+  border-color: #1a964c !important;
   color: #ffffff !important;
 }
 
 .sauravpal-page .tmp-menu-bars::after {
-  background: #5137fa !important;
+  background: #1a964c !important;
 }
 
 .sauravpal-page .tmp-menu-bars:hover {
-  color: #5137fa !important;
+  color: #1a964c !important;
 }
 
 /* Round action buttons (close buttons etc.) */
 .sauravpal-page .tmp-round-action-btn {
-  background: #5137fa !important;
-  border-color: #5137fa !important;
+  background: #1a964c !important;
+  border-color: #1a964c !important;
   color: #ffffff !important;
 }
 
@@ -31707,3 +31721,5 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
 .sauravpal-page .tmp-mainmenu-nav .tmp-mainmenu>li>a {
   font-size: 22px;
 }
+
+bg

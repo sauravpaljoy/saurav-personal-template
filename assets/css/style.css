@@ -18180,13 +18180,13 @@ Section Head
 
 @media (min-width: 1200px) {
   .img-box.v2 {
-    height: 400px;
+    height: 350px;
   }
 }
 
 @media (min-width: 1400px) {
   .img-box.v2 {
-    height: 447px;
+    height: 350px;
   }
 }
 
